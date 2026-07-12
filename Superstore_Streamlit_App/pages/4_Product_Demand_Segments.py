@@ -1,3 +1,4 @@
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -25,11 +26,12 @@ st.title("📦 Product Demand Segmentation")
 @st.cache_data
 def load_data():
 
-    df = pd.read_csv(
-        "data/sales.csv",
-        encoding="latin1"
-    )
+    
 
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    DATA_FILE = BASE_DIR / "data" / "sales.csv"
+
+    df = pd.read_csv(DATA_FILE, encoding="latin1")
     df["Order Date"] = pd.to_datetime(
         df["Order Date"],
         dayfirst=True

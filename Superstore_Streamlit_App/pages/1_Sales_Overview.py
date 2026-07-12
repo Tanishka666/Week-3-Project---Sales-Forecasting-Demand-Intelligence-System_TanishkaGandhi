@@ -25,7 +25,7 @@ st.title("📈 Sales Overview Dashboard")
 @st.cache_data
 def load_data():
 
-    df = pd.read_csv("data/Sales.csv")
+    df = pd.read_csv("data/sales.csv")
 
     df["Order Date"] = pd.to_datetime(
     df["Order Date"],

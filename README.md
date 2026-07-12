@@ -66,6 +66,11 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/Superstore-Sales-Forecasting-Dashboard.git
+
+```
+Streamlite APP
+```bash
+https://week-3-project---sales-forecasting-demand-intelligence-systemt.streamlit.app/
 ```
 
 Move into the project directory:

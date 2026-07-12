@@ -26,7 +26,7 @@ st.title("📦 Product Demand Segmentation")
 def load_data():
 
     df = pd.read_csv(
-        "data/Sales.csv",
+        "data/sales.csv",
         encoding="latin1"
     )
 

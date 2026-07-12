@@ -1,7 +1,7 @@
 # ==========================================================
 # Import Libraries
 # ==========================================================
-
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -22,15 +22,18 @@ st.title("📈 Sales Overview Dashboard")
 # Load Dataset
 # ==========================================================
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_FILE = BASE_DIR / "data" / "sales.csv"
+
 @st.cache_data
 def load_data():
 
-    df = pd.read_csv("data/sales.csv")
+    df = pd.read_csv(DATA_FILE)
 
     df["Order Date"] = pd.to_datetime(
-    df["Order Date"],
-    dayfirst=True
-)
+        df["Order Date"],
+        dayfirst=True
+    )
 
     return df
 

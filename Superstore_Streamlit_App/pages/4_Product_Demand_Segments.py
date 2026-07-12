@@ -76,7 +76,7 @@ monthly_sales = (
             "Sub-Category",
             pd.Grouper(
                 key="Order Date",
-                freq="M"
+                freq="ME"
             )
         ]
     )["Sales"]

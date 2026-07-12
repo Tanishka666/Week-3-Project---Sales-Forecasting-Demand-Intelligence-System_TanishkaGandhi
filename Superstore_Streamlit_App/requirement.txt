@@ -7,5 +7,4 @@ scikit-learn
 statsmodels
 prophet
 xgboost
-joblib
 scipy

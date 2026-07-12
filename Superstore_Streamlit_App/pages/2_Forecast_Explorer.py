@@ -18,7 +18,12 @@ st.title("📈 Forecast Explorer")
 # Load Forecast Results
 # -------------------------------------------------------
 
-forecast_df = pd.read_csv("forecast_results.csv")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+FORECAST_FILE = BASE_DIR / "forecast_results.csv"
+
+forecast_df = pd.read_csv(FORECAST_FILE)
 
 # -------------------------------------------------------
 # Sidebar
